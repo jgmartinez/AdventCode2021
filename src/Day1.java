@@ -8,9 +8,9 @@ import java.util.stream.Stream;
 
 public class Day1 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
 
-        List<Integer> measurements = getListOfElements("utils/day1_input.txt");
+        List<Integer> measurements = getListOfElements("resources/day1_input.txt");
 
         System.out.println("Challenge 1: " + getIncreases(measurements, 1));
         System.out.println("Challenge 2: " + getIncreases(measurements, 3));
@@ -28,15 +28,12 @@ public class Day1 {
         return result;
     }
 
-    public static List<Integer> getListOfElements (String file){
+    public static List<Integer> getListOfElements (String file) throws Exception{
 
-        List<Integer> result = new ArrayList<>();
+        List<Integer> result;
         try (Stream<String> lines = Files.lines(Paths.get(file))) {
             result = lines.map(Integer::parseInt).collect(Collectors.toList());
-        } catch (IOException e) {
-            e.printStackTrace();
         }
-
         return result;
     }
 }
