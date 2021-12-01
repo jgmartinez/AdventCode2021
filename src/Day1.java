@@ -17,7 +17,7 @@ public class Day1 {
     public static int getIncreases (List<Integer> measurements, int window){
         int result = 0, previousValue=0, value;
 
-        for (int i = 0; i < measurements.size()-window+1; i++){
+        for (int i = 0; i <= measurements.size() - window; i++){
             value = measurements.subList(i, i + window).stream().mapToInt(Integer::intValue).sum();
             if (value > previousValue && i!=0) //First occurrence must not be evaluated
                 result++;
