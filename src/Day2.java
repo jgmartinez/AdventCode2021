@@ -16,6 +16,7 @@ public class Day2 {
     public static int compute (List<String> measurements, int chall){
         int hPos=0, depth=0, aim=0;
         String[] lineArray;
+
         for(String line : measurements){
             lineArray = line.split(" ");
             switch (lineArray[0]){
