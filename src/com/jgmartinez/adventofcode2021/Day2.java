@@ -3,7 +3,9 @@ package com.jgmartinez.adventofcode2021;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -52,7 +54,7 @@ public class Day2 {
         return result;
     }
 
-    /*
+    // Oneliner for first problem ;)
     public static Map<String, Integer> firstProblemMagic (String file) throws IOException{
         Map<String, Integer> result;
         try (Stream<String> lines = Files.lines(Paths.get(file))) {
@@ -60,5 +62,5 @@ public class Day2 {
         }
         return result;
     }
-    */
+
 }
